@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/card_back">
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="7dp"
+        android:weightSum="3">
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="2.5"
+            android:background="#fff"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:hint="Enter Name of City"
+            />
+        <ImageView
+            android:id="@+id/searchImage"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:src="@drawable/srcbtn"
+            android:layout_weight=".5"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar"
+        android:foreground="?selectableItemBackground"
+        app:cardBackgroundColor="#243077"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:id="@+id/R1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/dateTV"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#202B53"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Date / Time"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/locationTV"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateTV"
+                android:layout_marginTop="5dp"
+                android:text="Location"
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tempTV2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateTV"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="00°"
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/feelTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationTV"
+                android:layout_marginTop="20dp"
+                android:text="Feel Like"
+                android:textColor="#fff"
+                android:textSize="15sp"
+
+                />
+
+            <TextView
+                android:id="@+id/feelTV2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tempTV2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:gravity="end"
+                android:text="00°"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/windTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feelTV"
+                android:layout_marginTop="5dp"
+                android:text="Wind"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/windTV2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feelTV2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="00 Km/h"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/pressureTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windTV"
+                android:layout_marginTop="5dp"
+                android:text="Pressure"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/pressureTV2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windTV2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="00 mb"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/humidityTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pressureTV"
+                android:layout_marginTop="5dp"
+                android:text="Humidity"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/humidityTV2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pressureTV2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="00%"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/minMaxTV2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/humidityTV"
+                android:layout_marginTop="5dp"
+                android:text="Min/Max"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:id="@+id/down"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/humidityTV"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/downTV"
+                android:src="@drawable/down" />
+
+            <TextView
+                android:id="@+id/downTV"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/humidityTV"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/up"
+                android:text="00°"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/upTV"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/humidityTV"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="00°"
+                android:textColor="#fff" />
+
+            <ImageView
+                android:id="@+id/up"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/humidityTV"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/upTV"
+                android:src="@drawable/up" />
+
+            <TextView
+                android:id="@+id/sunriseTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/minMaxTV2"
+                android:layout_marginTop="5dp"
+                android:text="Sunrise"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/sunriseTV2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upTV"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="00:00 AM"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/sunsetTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sunriseTV"
+                android:layout_marginTop="5dp"
+                android:text="Sunset"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/sunsetTV2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sunriseTV2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="00:00 PM"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
